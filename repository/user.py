@@ -2,10 +2,10 @@ import psycopg2 as ps
 
 class Banco_Feeds(object):
     def __init__(self) -> None:
-        self.user = "wqrijdny"
-        self.password = "sprVVa1kI7ot2RHr2OxICBW0xYDFJxDO"
+        self.user = "dlxgzsgw"
+        self.password = "3ofhqHgt_GI7njhL6_wGp7MKIwY_MqCz"
         self.host = "mahmud.db.elephantsql.com"
-        self.dbname = "wqrijdny"
+        self.dbname = "dlxgzsgw"
         self.port = 5432
 
         self.conectar = ps.connect(user=self.user,
@@ -18,6 +18,8 @@ class Banco_Feeds(object):
 
         self.cursor.execute("CREATE TABLE IF NOT EXISTS feedbacks(nome_pessoa_feed text, email_pessoa_feed text, mensagem_pessoa_feed text)")
 
+        self.conectar.commit()
+        
     def Adicionar_Feed(self, nome_pessoa, email_pessoa, mensagem_pessoa):
         self.cursor.execute("INSERT INTO feedbacks(nome_pessoa_feed, email_pessoa_feed, mensagem_pessoa_feed) VALUES(%s,%s,%s)", (nome_pessoa, email_pessoa, mensagem_pessoa))
 
@@ -29,5 +31,4 @@ class Banco_Feeds(object):
         feeds = list(self.cursor.fetchall())
 
         return feeds
-    
-Banco_Feeds()
+
