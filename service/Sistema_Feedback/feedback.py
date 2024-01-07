@@ -66,12 +66,12 @@ class FeedBack(object):
             return self.Informar_Erro("mensagem_errada")
         
         else:
-            # banco_feed = Banco_Feeds()
+            banco_feed = Banco_Feeds()
 
-            # banco_feed.Adicionar_Feed(nome_pessoa=self.input_nome_feed,
-            #                           email_pessoa=self.input_email_feed,
-            #                           mensagem_pessoa=self.input_mensagem_feed
-            #                           )
+            banco_feed.Adicionar_Feed(nome_pessoa=self.input_nome_feed,
+                                      email_pessoa=self.input_email_feed,
+                                      mensagem_pessoa=self.input_mensagem_feed
+                                      )
 
             return self.Avisar_Feedback_Corretamente()
             
