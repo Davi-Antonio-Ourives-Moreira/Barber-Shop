@@ -30,4 +30,3 @@ class Banco_Feeds(object):
 
         return feeds
     
-Banco_Feeds()
