@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Wendel Barber  Shop</title>
+
+        <link rel="stylesheet" href="style.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+        <style>
+            *{
+                margin: 0;
+            }
+
+            *::selection{
+                background-color: transparent;
+            }
+
+            html{
+                font-family: 'Ubuntu', sans-serif;
+            }
+
+            header{
+                position: fixed;
+                background-color: #e7e7e7;
+                width: 100%;
+                height: 12%;
+                z-index: 9993939;
+            }
+
+            header img{
+                position: relative;
+                left: 5%;
+                top: -10px;
+                width: 250px;
+            }
+
+            .menu-scroll a{
+                position: relative;
+                left: 60%;
+                top: -90px;
+                text-decoration: none;
+                color: black;
+                font-size: 20px;
+                margin: 10px;
+                
+            }
+
+            .menu-scroll a:hover{
+                width: 100px;
+                color: rgb(141, 138, 138);
+            }
+
+            .imagem-ilustrativa {
+                background: linear-gradient(rgba(36, 39, 38, 0.5), rgba(36, 39, 38, 0.5)), rgba(36, 39, 38, 0.5) url(https://i.ibb.co/3z643Rs/imagem-ilustrativa.jpg) no-repeat center;
+                background-size: cover;
+                height: 750px;
+                position: relative;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                
+            }
+
+            .imagem-ilustrativa h1{
+                position: absolute;
+                left: 13%;
+                font-size: 50px;
+                color: white;
+            }
+
+
+            .imagem-ilustrativa p{
+                position: absolute;
+                color: white;
+                left: 50%;
+                font-size: 20px;
+
+            }
+
+            .agendamento{
+                position: absolute;
+                left: 61%;
+                top: 60%;
+                display: block;
+                width: 160px;
+                height: 55px;
+                line-height: 35.5px;
+                padding: 10px 5px;
+                margin: 20px;
+                background-color: brown;
+                color: #FFF;
+                border-radius: 5px;
+                text-decoration: none;
+                text-align: center;
+                font-weight: bold;
+                font-family: Arial;
+            }
+
+            .agendamento:hover{
+                background-color: rgb(131, 36, 36);
+            }
+
+            .servicos h1{
+                position: absolute;
+                left: 33%;
+                top: 105%;
+                font-size: 50px;
+                color: rgb(100, 96, 96);
+            }
+            
+            .division{
+                position: relative;
+                top: 150px;
+                left: 41%;
+                width: 200px;
+                border-top: 5px solid goldenrod;
+            }
+            
+            .cards{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                margin-left: 350px;
+                margin-top: 250px;
+            }
+
+            .card{
+                width: 18rem;
+                height: 20rem;
+                border: 3px solid silver;
+            }
+
+            .card img{
+                position: relative;
+                left: 15%;
+                justify-content: center;
+                align-items: center;
+                width: 180px;
+            }
+
+            .card a{
+                display: block;
+                width: 160px;
+                height: 35px;
+                line-height: 20px;
+                padding: 10px 5px;
+                margin-left: 38px;
+                background-color: brown;
+                color: #FFF;
+                border-radius: 5px;
+                text-decoration: none;
+                text-align: center;
+                font-weight: bold;
+                font-family: Arial;
+            }
+
+            .depoimentos h1{
+                position: absolute;
+                left: 38%;
+                top: 185%;
+                font-size: 50px;
+                color: rgb(100, 96, 96);
+            }
+
+            .division2{
+                position: relative;
+                top: 180px;
+                left: 41%;
+                width: 200px;
+                border-top: 5px solid goldenrod;
+            }
+
+            .localizacao h1{
+                position: absolute;
+                left: 36%;
+                top: 250%;
+                font-size: 50px;
+                color: rgb(100, 96, 96);
+            }
+
+            .division3{
+                position: relative;
+                top: 675px;
+                left: 41%;
+                width: 200px;
+                border-top: 5px solid goldenrod;
+            }
+
+            iframe{
+                position: relative;
+                top: 700px;
+            }
+
+            footer{
+                position: absolute;
+                top: 335%;
+                width: 100%;
+                background-color: rgb(63, 61, 61);
+                height: 40%;
+            }
+
+            footer .atendimento h2{
+                margin-top: 15px;
+                margin-left: 15px;
+                color: #e7e7e7;
+            }
+
+            footer .atendimento h6{
+                margin-top: -2px;
+                margin-left: 10px;
+                color: #e7e7e7;
+            }
+
+            .dia_semana{
+                margin: 20px;
+                display: flex;
+                flex-direction: row;
+            }
+
+            .final_semana{
+                margin: 20px;
+                display: flex;
+                flex-direction: row;
+            }
+            
+            .email{
+                margin: 20px;
+                display: flex;
+                flex-direction: row;
+            }
+
+            .telefone{
+                margin: 20px;
+                display: flex;
+                flex-direction: row;
+            }
+
+            footer .redes_sociais h2{
+                margin-top: -298px;
+                margin-left: 350px;
+                color: #e7e7e7;
+            }
+
+            .instagram{
+                margin-left: 350px;
+                margin-top: 18px;
+                display: flex;
+                flex-direction: row;
+            }
+
+            .instagram a{
+                margin-top: -4px;
+                margin-left: 10px;
+                text-decoration: none;
+                color: white;
+            }
+
+            .instagram a:hover{
+                color: gainsboro;
+            }
+
+            .footer-logo{
+                margin-left: 350px;
+                margin-top: 50px;
+                width: 200px;
+                background-color: white;
+            }
+
+            .footer-logo img{
+                width: 200px;
+            }
+
+            .feedback h2{
+                position: relative;
+                top: 0px;
+                left: 18%;
+            }
+
+            .input_feed{
+                width: 250px;
+                margin: 10px;
+                display: flex;
+                flex-direction: column;
+                border: 0.8px solid black;
+                outline: none;
+            }
+
+            .feedback{
+                position: absolute;
+                top: -10px;
+                left: 60%;
+            }
+
+            textarea{
+                height: 130px;
+                border: 0.8px solid black;
+                outline: none;
+            }
+
+            
+
+            .button_feedback{
+                position: relative;
+                left: 10px;
+            }
+
+            .carousel{
+                width: 800px;
+                position: absolute;
+                top: 1600px;
+                left: 350px;
+            }
+            
+            #card{
+                max-width: 320px;
+                position: relative;
+                left: 250px;
+                height: 250px;
+            }
+
+            #card img{
+                position: relative;
+                left: 0;
+                width: 100px;
+            }
+
+            .carousel-item img{
+                width: 50px;
+            }
+
+        
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <img src="{{ url_for(pasta_imagens, filename=imagem_logo) }}" alt="logo">
+
+            <nav class="menu-scroll">
+                <a href="#">Início</a>
+                <a href="">Serviços</a>
+                <a href="">Feedback</a>
+                <a href="">Localização</a>
+                <a href="">Depoimentos</a>
+
+            </nav>
+        </header>
+
+        <main>
+            
+            <section class="imagem-ilustrativa">
+
+
+                <h1><strong>Wendel Barber Shop</strong></h1>
+
+                <p>
+                    Bem-vindo à nossa barbearia, 
+                    onde a tradição encontra o estilo moderno!<br> 
+                    Estamos empolgados por tê-lo conosco para uma experiência única de 
+                    cuidados <br> com a barba e o visual.Relaxe, e desfrute do ambiente descontraído e saia com <br>
+                    um visual renovado. Estamos ansiosos para tornar cada visita sua à nossa bar<strong>-</strong><br>bearia memorável. 
+                    Seja bem-vindo ao seu novo destino de estilo!
+                </p>
+
+
+                <a href="https://api.whatsapp.com/send/?phone=5513996742844&text&type=phone_number&app_absent=0" class="agendamento">Agendar Horário</a>
+            </section>
+            
+            <section class="servicos">
+                <h1>Serviços Da Barbearia</h1>
+
+                <div class="division"></div>
+
+                <div class="cards">
+                    <div class="card">
+                        <img src="{{ url_for(pasta_imagens, filename=imagem_tesoura) }}" class="card-img-top" alt="cabelo">
+                        <div class="card-body">
+                          <h5 class="card-title">Corte de cabelo</h5>
+                          <p class="card-text">Fazemos corte clássico e moderno</p>
+                          <a href="https://api.whatsapp.com/send/?phone=5513996742844&text&type=phone_number&app_absent=" class="btn btn-primary">Saiba mais</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="{{ url_for(pasta_imagens, filename=imagem_navalha) }}" class="card-img-top" alt="barba">
+                        <div class="card-body">
+                          <h5 class="card-title">Corte de barba</h5>
+                          <p class="card-text">Amparamento da barba e raspagem</p>
+                          <a href="https://api.whatsapp.com/send/?phone=5513996742844&text&type=phone_number&app_absent=" class="btn btn-primary">Saiba mais</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="{{ url_for(pasta_imagens, filename=imagem_tesoura_navalha) }}" class="card-img-top" alt="combo">
+                        <div class="card-body">
+                          <h5 class="card-title">Combo</h5>
+                          <p class="card-text">Corte de cabelo + Corte de Barba</p>
+                          <a href="https://api.whatsapp.com/send/?phone=5513996742844&text&type=phone_number&app_absent=" class="btn btn-primary">Saiba mais</a>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="depoimentos">
+                <h1>Depoimentos</h1>
+
+                <div class="division2"></div>
+
+                <div id="carouselExampleDark" class="carousel carousel-dark slide">
+        
+                    <div class="carousel-inner">
+                      <div class="carousel-item active" data-bs-interval="10000">
+                        <div class="row row-cols-1 row-cols-md-2 g-4 w-50">
+                            <div class="col">
+                                <div class="card" id="card">
+                                  <img src="{{ url_for(pasta_imagens, filename=imagem_avatar_depoimentos) }}" class="card-img-top" alt="avatar">
+                                  <div class="card-body">
+                                    <h5 class="card-title" style="position: relative; top: -85px; left: 65px;">{{ informacoes_primeiro_feed[0] }}</h5>
+                                    <p class="card-text" style="position: relative; top: -30px;">{{ informacoes_primeiro_feed[2] }}</p>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                      </div>
+
+                      {% if not informacoes_feeds_restantes == [] %}
+                        {% for info in informacoes_feeds_restantes %}
+                            <div class="carousel-item" data-bs-interval="2000">
+                                <div class="row row-cols-1 row-cols-md-2 g-4 w-50">
+                                    <div class="col">
+                                        <div class="card" id="card">
+                                          <img src="{{ url_for(pasta_imagens, filename=imagem_avatar_depoimentos) }}" class="card-img-top" alt="avatar">
+                                          <div class="card-body">
+                                            <h5 class="card-title" style="position: relative; top: -85px; left: 65px;">{{ info[0] }}</h5>
+                                            <p class="card-text" style="position: relative; top: -30px;">{{ info[2] }}</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+            
+            
+            </section>
+
+            <section class="localizacao">
+                <h1>Aonde nos achar?</h1>
+
+                <div class="division3"></div>
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.8777533934485!2d-47.53154602455986!3d-24.731076805605422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94daa202c1a38981%3A0xe1eebf726baad925!2sAlameda%20dos%20Cravos%2C%20755%20-%20Balne%C3%A1rio%20Yemar%2C%20Ilha%20Comprida%20-%20SP%2C%2011925-000!5e0!3m2!1spt-BR!2sbr!4v1704304609968!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+        </main>
+
+        <footer>
+            <div class="atendimento">
+                <h2>Atendimento</h2>
+
+                <div class="horarios">
+
+                    <div class="dia_semana">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" style="color: white;" class="bi bi-clock" viewBox="0 0 16 16">
+                            <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"/>
+                            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"/>
+                            
+                        </svg>
+
+                        <h6>Seg à Sex as 8:00 às 21:00</h6>
+                    </div>
+
+                    <div class="final_semana">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" style="color: white;" class="bi bi-clock" viewBox="0 0 16 16">
+                            <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"/>
+                            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"/>
+                            
+                        </svg>
+
+                        <h6>Sab à Dom das 8:00 às 21:00</h6>
+                    </div>
+
+            </div>
+
+            <div class="contato">
+                <h2>Contato</h2>
+
+                <div class="email">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" style="color: white;" class="bi bi-envelope" viewBox="0 0 16 16">
+                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+                    </svg>
+
+                    <h6>contatowendelbarbershop@gmail.com</h6>
+
+                </div>
+
+                <div class="telefone">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" style="color: white;" viewBox="0 0 16 16">
+                        <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+                    </svg>
+
+                    <h6>+55 13 99674-2844</h6>
+                </div>
+
+            </div>
+
+            <div class="redes_sociais">
+                <h2>Redes Sociais</h2>
+
+                <div class="instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" style="color: #FFF;" class="bi bi-instagram" viewBox="0 0 16 16">
+                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                    </svg>
+
+                    <a href="https://www.instagram.com/barbearia_wendelcorts/">barbearia_wendelcorts</a>
+                </div>
+
+            </div>
+
+            <div class="footer-logo">
+
+                <img src="{{ url_for(pasta_imagens, filename=imagem_logo) }}" alt="logo footer">
+            </div>
+            
+            <div class="feedback">
+                <h2>Feedback</h2>
+
+                <div class="preencimento-feedback">
+                    <form action="feedback" method="post">
+                        <input type="text" name="input_nome_feedback" class="input_feed" id="n" placeholder="Nome" onkeyup="Borda_Normal_01()">
+
+                        <input type="text" name="input_email_feedback"  class="input_feed" id="e" placeholder="Email" onkeyup="Borda_Normal_02()">
+
+                        <textarea name="input_mensagem_feedback" class="input_feed" icols="30" id="m" rows="10" placeholder="Mensagem" onkeyup="Borda_Normal_03()"></textarea>
+
+                        <button type="submit" class="button_feedback">Enviar Feedback</button>
+
+                        <script>
+                            function Borda_Normal_01(){
+                                const nome = document.getElementById("n");
+    
+                                nome.style.border = "0.8px solid black";
+
+                            }
+
+                            function Borda_Normal_02(){
+                                const email = document.getElementById("e");
+    
+                                email.style.border = "0.8px solid black";
+
+                            }
+
+                            function Borda_Normal_03(){
+                                const mensagem = document.getElementById("m");
+
+                                mensagem.style.border = "0.8px solid black"
+                            }
+                        </script>
+
+                    </form>
+
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages[0] == "erro" %}
+                            <script>
+                                const nome = document.getElementById("n");
+
+                                const email = document.getElementById("e");
+
+                                const mensagem = document.getElementById("m");
+
+                                nome.value = JSON.parse('{{ messages[2] | tojson}}');
+
+                                email.value = JSON.parse('{{ messages[3] | tojson}}');
+
+                                mensagem.value = JSON.parse('{{ messages[4] | tojson}}');
+
+                                window.scroll(0, 3198381)
+                                
+                                if (JSON.parse('{{ messages[1] | tojson}}') == "todos_campos_errados"){
+                                    nome.style.border = "0.8px solid red";
+
+                                    email.style.border = "0.8px solid red";
+
+                                    mensagem.style.border = "0.8px solid red";
+                                }
+
+                                if (JSON.parse('{{ messages[1] | tojson}}') == "campo_nome_email_errados"){
+                                    nome.style.border = "0.8px solid red";
+
+                                    email.style.border = "0.8px solid red";
+                                }
+
+                                if (JSON.parse('{{ messages[1] | tojson}}') == "campo_email_mensagem_errados"){
+                                    email.style.border = "0.8px solid red";
+
+                                    mensagem.style.border = "0.8px solid red";
+                                }
+
+                                if (JSON.parse('{{ messages[1] | tojson}}') == "campo_nome_mensagem_errados"){
+                                    nome.style.border = "0.8px solid red";
+
+                                    mensagem.style.border = "0.8px solid red";
+                                }
+
+                                if (JSON.parse('{{ messages[1] | tojson}}') == "nome_errado"){
+                                    nome.style.border = "0.8px solid red";
+                                }
+
+                                if (JSON.parse('{{ messages[1] | tojson}}') == "email_errado"){
+                                    email.style.border = "0.8px solid red";
+                                }
+
+                                if (JSON.parse('{{ messages[1] | tojson}}') == "mensagem_errada"){
+                                    mensagem.style.border = "0.8px solid red";
+                                }
+                            
+                            </script>
+
+                            <div class="alert alert-danger" role="alert" style="position: absolute; top: 30px; width: 400px;">
+                                Algum campo foi preencido incorretamente!
+
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        {% elif messages[0] == "todos_campos_corretamente" %}
+                            <script>
+                                window.scroll(0, 9348)
+                        
+                            </script>
+
+                            <div class="alert alert-success" role="alert" style="position: absolute; top: 30px;">
+                                Obrigado pelo feedback :)
+
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        {% endif %}
+                    {% endwith %}
+                
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
