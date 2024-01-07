@@ -31,4 +31,3 @@ class Banco_Feeds(object):
         feeds = list(self.cursor.fetchall())
 
         return feeds
-
