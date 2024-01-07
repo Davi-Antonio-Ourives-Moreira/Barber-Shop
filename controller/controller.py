@@ -19,7 +19,7 @@ def home():
                                  imagem_logo="logo-barbearia2.png",
                                  imagem_tesoura="corte_cabelo.png",
                                  imagem_navalha="corte_barba.png",
-                                 imagem_tesoura_navalha="combo.png",)
+                                 imagem_tesoura_navalha="combo.png",
                                  imagem_avatar_depoimentos="avatar.png",
                                  informacoes_primeiro_feed=primeiro_feed,
                                  informacoes_feeds_restantes=leitura_feeds)
