@@ -8,21 +8,21 @@ app.secret_key = "GeeksForGeeks"
 
 @app.get("/")
 def home():
-    banco_feeds = Banco_Feeds()
+    # banco_feeds = Banco_Feeds()
 
-    leitura_feeds = banco_feeds.Ver_Feeds()
+    # leitura_feeds = banco_feeds.Ver_Feeds()
 
-    primeiro_feed = leitura_feeds.pop(0)
+    # primeiro_feed = leitura_feeds.pop(0)
 
     return flask.render_template("index.html",
                                  pasta_imagens="static",
                                  imagem_logo="logo-barbearia2.png",
                                  imagem_tesoura="corte_cabelo.png",
                                  imagem_navalha="corte_barba.png",
-                                 imagem_tesoura_navalha="combo.png",
-                                 imagem_avatar_depoimentos="avatar.png",
-                                 informacoes_primeiro_feed=primeiro_feed,
-                                 informacoes_feeds_restantes=leitura_feeds)
+                                 imagem_tesoura_navalha="combo.png",)
+                                #  imagem_avatar_depoimentos="avatar.png",
+                                #  informacoes_primeiro_feed=primeiro_feed,
+                                #  informacoes_feeds_restantes=leitura_feeds)
 
 @app.post("/feedback")
 def feedback():
