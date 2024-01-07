@@ -22,7 +22,8 @@ def home():
                                  imagem_tesoura_navalha="combo.png",
                                  imagem_avatar_depoimentos="avatar.png",
                                  informacoes_primeiro_feed=primeiro_feed,
-                                 informacoes_feeds_restantes=leitura_feeds)
+                                 informacoes_feeds_restantes=leitura_feeds
+                                 )
 
 @app.post("/feedback")
 def feedback():
