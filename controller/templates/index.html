@@ -31,8 +31,8 @@
 
             header{
                 position: fixed;
-                width: 100%;
-                height: 12%;
+                /* width: 100%;
+                height: 12%; */
                 z-index: 9993939;
             }
 
@@ -41,6 +41,11 @@
                 left: 5%;
                 top: 5px;
                 width: 250px;
+            }
+
+            nav{
+                width: 205%;
+                height: 12%;
             }
 
             ul{
@@ -329,16 +334,30 @@
             }
 
             @media screen and (max-width: 1475px){
-                ul{
-                    left: 55%;
-                }
-
                 .card{
                     left: -50px;
                 }
 
                 .carousel{
                     left: 310px;
+                }
+            }
+
+            @media  screen and (max-width: 1543px) {
+                ul{
+                    left: 55%;
+                }
+            }
+
+            @media screen and (max-width: 1473px) {
+                ul{
+                    left: 50%;
+                }
+            }
+
+            @media screen and (max-width: 1411px) {
+                ul{
+                    left: 45%;
                 }
             }
 
@@ -360,9 +379,9 @@
                 }
             }
 
-            @media screen and (max-width: 1342px) {
+            @media screen and (max-width: 1346px) {
                 ul{
-                    left: 50%;
+                    left: 40%;
                 }
             }
 
@@ -387,6 +406,12 @@
                 }
             }
 
+            @media screen and (max-width: 1276px) {
+                ul{
+                    left: 35%;
+                }
+            }
+
             @media screen and (max-width: 1266px){
                 .imagem-ilustrativa p{
                     left: 540px;
@@ -405,11 +430,6 @@
                 }
             }
 
-            @media screen and (max-width: 1231px) {
-                ul{
-                    left: 45%;
-                }
-            }
 
             @media screen and (max-width: 1226px){
                 .imagem-ilustrativa h1{
@@ -466,11 +486,18 @@
                 }
             }
 
-            @media screen and (max-width: 1142px) {
+            @media screen and (max-width: 1211px) {
                 ul{
-                    left: 40%
+                    left: 30%;
                 }
             }
+
+            @media screen and (max-width: 1136px) {
+                ul{
+                    left: 25%;
+                }
+            }
+
 
             @media screen and (max-width: 1124px) {
                 .imagem-ilustrativa p{
@@ -496,17 +523,24 @@
                 }
             }
 
-            @media screen and (max-width: 1073px){
+            @media screen and (max-width: 1079px) {
                 ul{
-                    left: 35%;
+                    left: 20%;
                 }
             }
 
-            @media screen and (max-width: 1010px) {
+            @media screen and (max-width: 1014px) {
                 ul{
-                    left: 30%;
+                    left: 15%;
                 }
             }
+
+            @media screen and (max-width: 991px) {
+                nav{
+                    width: 300%;
+                }
+            }
+
 
             @media screen and (max-width: 999px) {
                 .imagem-ilustrativa h1{
@@ -558,9 +592,15 @@
                 }
             }
 
-            @media screen and (max-width: 991px) {
-                ul{
-                    left: 100px;
+            @media screen and (max-width: 970px) {
+                nav{
+                    width: 1000px;
+                }
+
+                #menu{
+                    position: absolute;
+                    left: 80%;
+                    z-index: 38193819381;
                 }
             }
 
@@ -625,6 +665,14 @@
             @media screen and (max-width: 884px) {
                 footer .feedback{
                     left: 600px;
+                }
+            }
+
+            @media screen and (max-width: 831px) {
+                #menu{
+                    position: absolute;
+                    left: 70%;
+                    z-index: 38193819381;
                 }
             }
 
@@ -843,6 +891,16 @@
                 footer .feedback{
                     top: 390px;
                     left: 5px;
+                }
+            }
+
+            @media screen and (max-width: 428px) {
+                header img{
+                    left: 1%;
+                }
+
+                #menu{
+                    left: 35%;
                 }
             }
 
@@ -1147,7 +1205,7 @@
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
                 <div class="container-fluid">
                     <img src="{{ url_for(pasta_imagens, filename=imagem_logo) }}" alt="logo">
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <button id="menu" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
