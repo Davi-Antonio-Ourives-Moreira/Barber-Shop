@@ -14,3 +14,8 @@
 <li>Python</li>
 <li>Flask</li>
 <li>Sql</li>
+
+# Servidores utilizados
+
+<li>Render</li>
+<li>ElephantSQL</li>
